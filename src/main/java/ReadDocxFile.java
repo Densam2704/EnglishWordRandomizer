@@ -41,14 +41,6 @@ public class ReadDocxFile
 	}
   }
   
-  private static void readParagraphsFromXWPFDocument(XWPFDocument document){
-	List<XWPFParagraph> paragraphs = document.getParagraphs();
- 
-	for (XWPFParagraph paragraph : paragraphs) {
-	  System.out.println(paragraph.getParagraphText());
-	}
-  }
-  
   private static void readTableFromXWPFDocument(XWPFDocument document){
 	List<XWPFTable> tables = document.getTables();
 	
