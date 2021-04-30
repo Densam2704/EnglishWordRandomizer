@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Random;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 
@@ -13,9 +12,6 @@ public class ReadDocxFile
   public static final String WORD_FILE = "C:\\Study\\English\\Vocabulary_2.docx";
   public static final int NUMBER_OF_WORDS = 10;
   
-//public static final String WORD_FILE =
-//		"C:\\Study\\Programming\\PC projects\\Everyday learning\\EnglishWordRandomizer\\data\\docx files\\Test file.docx";
-//
   public static  ArrayList<String> wordsAndTranslations = new ArrayList<String>();
   public static  ArrayList<String>randomWordsList = new ArrayList<String>();
   
