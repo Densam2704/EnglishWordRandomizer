@@ -7,7 +7,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 
-public class ReadDocxFile
+public class Main
 {
   public static final String WORD_FILE = "C:\\Study\\English\\Vocabulary_2.docx";
   public static final int NUMBER_OF_WORDS = 10;
@@ -47,7 +47,7 @@ public class ReadDocxFile
 	  for (int i = 1; i< rows.size();i++) {
 		try {
 		  XWPFTableRow row = rows.get(i);
-		  readWordsAndTranslationsFromRow(row);
+		  readWordAndTranslationsFromRow(row);
 		}
 		catch (Exception e){
 		}
@@ -56,7 +56,7 @@ public class ReadDocxFile
 		
   }
   
-  private static void readWordsAndTranslationsFromRow(XWPFTableRow row){
+  private static void readWordAndTranslationsFromRow(XWPFTableRow row){
 	String result="";
 	if (row.getCell(0).getText().equals("")||row.getCell(2).getText().equals("")){
 	  return;
@@ -74,13 +74,13 @@ public class ReadDocxFile
     ArrayList<String>copyList = wordsAndTranslations;
 	for (int i = 0; i < listSize; i++) {
 	  //random int from 0 to copyList.size()
-	  int rNum = getRandomInt(0,copyList.size());
+	  int rNum = generateRandomInt(0,copyList.size());
 	  randomWordsList.add(copyList.get(rNum));
 	  copyList.remove(rNum);
 	}
   }
   
-  private static int getRandomInt(int min, int max){
+  private static int generateRandomInt(int min, int max){
 	Random r = new Random();
 	return r.nextInt((max - min) + 1) + min;
   }
