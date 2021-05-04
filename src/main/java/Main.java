@@ -9,7 +9,7 @@ import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 
 public class Main
 {
-  public static final String WORD_FILE = "C:\\Study\\English\\Vocabulary_2.docx";
+  public static final String WORD_FILE = "c:\\Users\\SiniyAl\\Documents\\Vocabulary_2.docx";
   public static final int NUMBER_OF_WORDS = 10;
   
   public static  ArrayList<String> wordsAndTranslations = new ArrayList<String>();
