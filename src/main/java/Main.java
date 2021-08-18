@@ -38,7 +38,13 @@ public class Main {
 	  return false;
 	}
 	if (args.length==2){
-	  NUMBER_OF_WORDS=Integer.parseInt(args[1]);
+	  try {
+		NUMBER_OF_WORDS=Integer.parseInt(args[1]);
+	  }
+	  catch (IllegalArgumentException e){
+		System.out.println("Error. Wrong words number. Default value is used");
+	    e.printStackTrace();
+	  }
 	}
 	return true;
   }
