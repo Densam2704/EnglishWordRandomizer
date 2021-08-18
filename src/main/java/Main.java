@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -9,7 +10,7 @@ import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 
 public class Main {
   public static String WORD_FILE;
-  public static final int NUMBER_OF_WORDS = 10;
+  public static int NUMBER_OF_WORDS = 10;
  
   public static ArrayList<String> wordsAndTranslations = new ArrayList<String>();
   public static ArrayList<String> randomWordsList = new ArrayList<String>();
@@ -23,7 +24,10 @@ public class Main {
   }
   
   private static boolean isArgsCorrect(String[] args) {
-	
+	if (args.length<1){
+	  System.out.println("Error. Not enough arguments");
+	  return false;
+	}
 	if (args[0] == null) {
 	  System.out.println("Error. Wrong arguments");
 	  return false;
@@ -32,6 +36,9 @@ public class Main {
 	if (!new File(WORD_FILE).exists()) {
 	  System.out.println("Error. No such file");
 	  return false;
+	}
+	if (args.length==2){
+	  NUMBER_OF_WORDS=Integer.parseInt(args[1]);
 	}
 	return true;
   }
