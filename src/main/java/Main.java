@@ -10,7 +10,7 @@ import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 public class Main {
   public static String WORD_FILE;
   public static final int NUMBER_OF_WORDS = 10;
-  
+ 
   public static ArrayList<String> wordsAndTranslations = new ArrayList<String>();
   public static ArrayList<String> randomWordsList = new ArrayList<String>();
   
